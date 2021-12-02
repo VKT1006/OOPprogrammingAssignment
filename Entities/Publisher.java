@@ -1,5 +1,7 @@
 package Entities;
 
+import java.util.Objects;
+
 public class Publisher {
 
 	
@@ -40,6 +42,23 @@ public class Publisher {
 	@Override
 	public String toString() {
 		return "Publisher [id=" + id + ", name=" + name + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, name);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Publisher other = (Publisher) obj;
+		return id == other.id && Objects.equals(name, other.name);
 	}
 	
 	

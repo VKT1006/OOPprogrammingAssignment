@@ -48,7 +48,7 @@ public class Book {
 
 
 
-	/*
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -71,7 +71,7 @@ public class Book {
 				&& Objects.equals(name, other.name) && pageNumber == other.pageNumber
 				&& Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price)
 				&& publishYear == other.publishYear && Objects.equals(publisher, other.publisher);
-	}*/
+	}
 
 
 

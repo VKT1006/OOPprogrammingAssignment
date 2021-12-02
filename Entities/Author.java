@@ -1,5 +1,7 @@
 package Entities;
 
+import java.util.Objects;
+
 public class Author {
 
 	private int id;
@@ -57,6 +59,27 @@ public class Author {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+
+	
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(firstName, id, lastName);
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Author other = (Author) obj;
+		return Objects.equals(firstName, other.firstName) && id == other.id && Objects.equals(lastName, other.lastName);
 	}
 	
 	

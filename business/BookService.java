@@ -20,7 +20,7 @@ public class BookService {
 			
 			for(Author a : b.getAuthor()) {
 				
-				if(a.getId() == author.getId()) {
+				if(a.equals(author)) {
 					
 					filteredListOfBooks.add(b);
 					
@@ -40,7 +40,7 @@ public class BookService {
 		
 		for(Book b : books) {
 			
-			if(b.getPublisher().getId() == publisher.getId()) {
+			if(b.getPublisher().equals(publisher)) {
 				filteredListOfBooks.add(b);
 			}
 			
